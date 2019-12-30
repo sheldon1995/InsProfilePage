@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  InsProfilePage
 //
-//  Created by Stephen Dowless on 4/2/19.
-//  Copyright © 2019 Stephan Dowless. All rights reserved.
-//
 
 import UIKit
 
@@ -19,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         let layout = UICollectionViewFlowLayout()
+        /*
+         The root view controller provides the content view of the window. Assigning a view controller to this property (either programmatically or using Interface Builder) installs the view controller’s view as the content view of the window. The new content view is configured to track the window size, changing as the window size changes. If the window has an existing view hierarchy, the old views are removed before the new ones are installed.
+         The default value of this property is nil.
+         */
+        // UICollectionView must be initialized a non-nil collection view layout.
         window?.rootViewController = ProfileController(collectionViewLayout:layout)
         return true
     }

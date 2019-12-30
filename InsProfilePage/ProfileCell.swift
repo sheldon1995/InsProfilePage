@@ -2,8 +2,6 @@
 //  ProfileCell.swift
 //  InsProfilePage
 //
-//  Created by 谢文韬 on 12/28/19.
-//  Copyright © 2019 Stephan Dowless. All rights reserved.
 //
 
 import UIKit
@@ -22,13 +20,16 @@ class ProfileCell:UICollectionViewCell{
     }
     let cellimageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "venom")
+        iv.image = #imageLiteral(resourceName: "2")
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
        
         return iv
     }()
     // Lifecycle
+    /*
+      If the context has a flipped-coordinate space—often the case on iOS—the origin is in the upper-left corner and the rectangle extends towards the lower-right corner.
+     */
     override init(frame: CGRect){
         super.init(frame:frame)
         addSubview(cellimageView)
